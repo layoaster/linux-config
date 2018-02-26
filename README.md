@@ -2,11 +2,16 @@
 
 Title is self-explanatory so basically, there are 99.9% probabilities this repository won't be of your interest.
 
+## OS tweaks
+
+###### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
+A color scheme for Konsole.
+
 ## Software / System Utilities
 
 ### Xbindkeys
 
-Used for mouse extra buttons remapping. 
+Used for mouse's extra buttons remapping.
 
 1. Install the following:
 ```
@@ -36,8 +41,6 @@ xbindkeys xbindkeys -p
 
 ## Developer Tools
 
-### [pyenv](https://github.com/pyenv/pyenv)
-
-### [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
-
-### [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+1. [pyenv](https://github.com/pyenv/pyenv)
+2. [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
+3. [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
