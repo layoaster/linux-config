@@ -4,7 +4,7 @@ Title is self-explanatory so basically, there are 99.9% probabilities this repos
 
 ## OS tweaks
 
-###### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
+##### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
 A color scheme for Konsole.
 
 ## Software / System Utilities
