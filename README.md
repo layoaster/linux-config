@@ -38,6 +38,10 @@ xbindkeys xbindkeys -p
 ```
 5. Remeber to include cmd `xbindkeys` in a startup script.
 
+### Sublime Text 3
+
+Install [`Package Control`](https://packagecontrol.io/installation).
+
 
 ## Developer Tools
 
