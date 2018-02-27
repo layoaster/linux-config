@@ -4,12 +4,12 @@ Title is self-explanatory so basically, there are 99.9% probabilities this repos
 
 ## OS tweaks
 
-##### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
+#### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
 A color scheme for Konsole.
 
 ## Software / System Utilities
 
-### Xbindkeys
+#### Xbindkeys
 
 Used for mouse's extra buttons remapping.
 
@@ -38,13 +38,13 @@ xbindkeys xbindkeys -p
 ```
 5. Remeber to include cmd `xbindkeys` in a startup script.
 
-### Sublime Text 3
+#### Sublime Text 3
 
 Install [`Package Control`](https://packagecontrol.io/installation).
 
 
 ## Developer Tools
 
-1. [pyenv](https://github.com/pyenv/pyenv)
-2. [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
-3. [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [pyenv](https://github.com/pyenv/pyenv)
+* [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
+* [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
