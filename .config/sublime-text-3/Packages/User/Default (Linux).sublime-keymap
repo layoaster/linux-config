@@ -1,0 +1,4 @@
+[
+    { "keys": ["control+keypad_divide"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["control+shift+keypad_divide"], "command": "toggle_comment", "args": { "block": true } },
+]
