@@ -64,6 +64,7 @@ DEFAULT_USER=`whoami`
 plugins=(
   git
   django
+  pass
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -85,7 +86,7 @@ zstyle ':completion:*' special-dirs true
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -117,6 +118,10 @@ alias doco-env="which_onsearch.sh"
 
 
 alias weather="curl wttr.in/~Barcelona"
+
+alias ll='ls -l --group-directories-first'
+alias la='ls -la --group-directories-first'
+
 
 ######## APPLICATIONS ENV ###########
 # PyCharm
