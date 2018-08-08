@@ -125,17 +125,7 @@ alias la='ls -la --group-directories-first'
 
 ######## APPLICATIONS ENV ###########
 # PyCharm
-export PATH=/opt/pycharm-2017.2/bin:$PATH
-
-
-# Virtualenvwrapper
-# export PATH=/home/layo/.local/bin:$PATH
-# export WORKON_HOME=$HOME/projects/venv
-# export PROJECT_HOME=$HOME/projects/code
-# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-# # export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
-# source virtualenvwrapper_lazy.sh
-
+export PATH=/opt/pycharm-2018/bin:$PATH
 
 
 # The next line updates PATH for the Google Cloud SDK.
