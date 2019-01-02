@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/layo/.oh-my-zsh
+export ZSH=/home/layo/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -39,7 +39,7 @@ CASE_SENSITIVE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -63,8 +63,9 @@ DEFAULT_USER=`whoami`
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  django
   pass
+  kube-ps1
+  helm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,10 +112,6 @@ alias docol="docker-compose logs -f"
 alias docos="docker-compose stop"
 alias docoe="docker-compose exec"
 alias docod="docker-compose down"
-alias doco-light="doco -f docker-compose-light.yml"
-alias doco-utils="doco -f docker-compose-utils.yml"
-alias doco-switch="switch_onsearch.sh"
-alias doco-env="which_onsearch.sh"
 
 
 alias weather="curl wttr.in/~Barcelona"
@@ -127,9 +124,14 @@ alias la='ls -la --group-directories-first'
 # PyCharm
 export PATH=/opt/pycharm-2018/bin:$PATH
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/layo/google-cloud-sdk/path.zsh.inc' ]; then source '/home/layo/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/layo/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/layo/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Kompose
+source <(kompose completion zsh)
+
+# Manualy enabling the kube-ps1 prompt
+PROMPT='$(kube_ps1) (%t) '$PROMPT
