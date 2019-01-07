@@ -1,23 +1,23 @@
 {
-	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Ocean.tmTheme",
-	"font_face": "Hack",
-	"font_size": 10,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"rulers":
-	[
-		100
-	],
-	"save_on_focus_lost": false,
-	"scroll_past_end": false,
-	"tab_size": 4,
-	"theme": "Boxy Ocean.sublime-theme",
-	"theme_accent_cyan": true,
-	"theme_find_panel_size_xs": true,
-	"theme_icons_materialized": true,
-	"theme_scrollbar_rounded": true,
-	"theme_tab_selected_underlined": true,
-	"translate_tabs_to_spaces": true
+    "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+    "font_face": "Hack",
+    "font_size": 10,
+    "ignored_packages":
+    [
+	    "Vintage"
+    ],
+    "rulers":
+    [
+	    80,
+	    100
+    ],
+    "save_on_focus_lost": false,
+    "scroll_past_end": false,
+    "tab_size": 4,
+    "ensure_newline_at_eof_on_save": true,
+    "save_on_focus_lost": true,
+    "theme": "Spacegray.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "spacegray_tabs_normal": true,
+    "spacegray_fileicons": true,
 }
