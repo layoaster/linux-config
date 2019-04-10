@@ -7,7 +7,22 @@ export ZSH=/home/layo/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+## POWERLEVEL9K customization
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext virtualenv newline context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time time)
+# Enable awesome-fonts
+POWERLEVEL9K_MODE="awesome-fontconfig"
+# vcs/git colors
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="006"
+# virtualenv indicator colors
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="104"
+POWERLEVEL9K_VIRTUALENV_FOREGROUND="015"
+# command_execution_time indicator colors
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="243"
+# time colors
+POWERLEVEL9K_TIME_BACKGROUND="252"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -63,8 +78,9 @@ DEFAULT_USER=`whoami`
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  fzf
   pass
-  kube-ps1
+  kubectl
   helm
 )
 
@@ -111,6 +127,7 @@ alias docou="docker-compose up -d"
 alias docol="docker-compose logs -f"
 alias docos="docker-compose stop"
 alias docoe="docker-compose exec"
+alias docor="docker-compose run --rm"
 alias docod="docker-compose down"
 
 
@@ -121,17 +138,23 @@ alias la='ls -la --group-directories-first'
 
 
 ######## APPLICATIONS ENV ###########
-# PyCharm
-export PATH=/opt/pycharm-2018/bin:$PATH
+### PyCharm
+# export PATH=/opt/pycharm-2018/bin:$PATH
 
-# The next line updates PATH for the Google Cloud SDK.
+### Google Cloud SDK
+## The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/layo/google-cloud-sdk/path.zsh.inc' ]; then source '/home/layo/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/layo/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/layo/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Kompose
-source <(kompose completion zsh)
+### fzf
+export FZF_BASE=/home/layo/.fzf
 
-# Manualy enabling the kube-ps1 prompt
-PROMPT='$(kube_ps1) (%t) '$PROMPT
+### virtualenv
+# Disable venv prompt so powerlevel9k handles it
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
+### pipenv
+# disable emoji
+# export PIPENV_HIDE_EMOJIS=1
