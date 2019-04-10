@@ -1,13 +1,23 @@
 # My Debian-based distro configuration
 
-Title is self-explanatory so basically, there are 99.9% probabilities this repository won't be of your interest.
+The configuration I usually replicate in my linux distributions. Mostly useful
+for programmers.
 
-## OS tweaks
+
+## Terminal utilities/customization
 
 #### Nord Konsole ([link](https://github.com/arcticicestudio/nord-konsole))
 A color scheme for Konsole.
 
-## Software / System Utilities
+#### Oh My Zsh ([link](https://github.com/robbyrussell/oh-my-zsh))
+
+* **Powerlevel9k** ([link](https://github.com/bhilburn/powerlevel9k)): A theme 
+for the `Oh My Zsh` framework.
+
+#### fzf ([link](https://github.com/junegunn/fzf))
+A general-purpose command-line fuzzy finder.
+
+## Software
 
 #### Xbindkeys
 
@@ -18,7 +28,8 @@ Used for mouse's extra buttons remapping.
 sudo apt-get install xbindkeys xautomation x11-utils
 ```
 
-2. Find the button number that is assgined to each button. Run `xev` to get the following output:
+2. Find the button number that is assgined to each button. Run `xev` to get the
+following output:
 ```
 ButtonRelease event, serial 41, synthetic NO, window 0x4c00001,
 root 0x2e9, subw 0x4c00002, time 25804905, (31,28), root:(821,80),
@@ -48,3 +59,4 @@ Install [`Package Control`](https://packagecontrol.io/installation).
 * [pyenv](https://github.com/pyenv/pyenv)
 * [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
 * [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [kubectx](https://github.com/ahmetb/kubectx)
