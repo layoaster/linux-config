@@ -5,7 +5,9 @@
 	],
 	"installed_packages":
 	[
-		"Package Control",
-		"Theme - Spacegray"
+		"gruvbox",
+		"LiveReload",
+		"MarkdownPreview",
+		"Package Control"
 	]
 }
