@@ -135,8 +135,9 @@ alias docod="docker-compose down"
 
 alias weather="curl wttr.in/~Barcelona"
 
+alias l='ll'
 alias ll='ls -l --group-directories-first'
-alias la='ls -la --group-directories-first'
+alias la='ls -lA --group-directories-first'
 
 
 ######## APPLICATIONS ENV ###########
