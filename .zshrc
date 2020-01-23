@@ -13,7 +13,8 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ## POWERLEVEL9K customization
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext virtualenv newline context dir vcs)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext virtualenv newline context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv newline context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time time)
 # vcs/git colors
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="006"
@@ -152,7 +153,7 @@ if [ -f '/home/layo/google-cloud-sdk/path.zsh.inc' ]; then source '/home/layo/go
 if [ -f '/home/layo/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/layo/google-cloud-sdk/completion.zsh.inc'; fi
 
 # enables experimental support for python 3.x
-export CLOUDSDK_PYTHON=python3
+#export CLOUDSDK_PYTHON=python3
 
 ### fzf
 export FZF_BASE=/home/layo/.fzf
