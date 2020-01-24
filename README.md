@@ -11,7 +11,7 @@ A color scheme for Konsole.
 
 #### Oh My Zsh ([link](https://github.com/robbyrussell/oh-my-zsh))
 
-* **Powerlevel9k** ([link](https://github.com/bhilburn/powerlevel9k)): A theme 
+* **Powerlevel9k** ([link](https://github.com/bhilburn/powerlevel9k)): A theme
 for the `Oh My Zsh` framework.
 
 #### fzf ([link](https://github.com/junegunn/fzf))
@@ -24,7 +24,7 @@ A general-purpose command-line fuzzy finder.
 Used for mouse's extra buttons remapping.
 
 1. Install the following:
-```
+```shell
 sudo apt-get install xbindkeys xautomation x11-utils
 ```
 
@@ -38,13 +38,13 @@ state 0x110, button 1, same_screen YES
 In this case `1` is the button number.
 
 3. Optionaly, you can generate a config file (`.xbindkeysrc`):
-```
+```shell
 xbindkeys --defaults > $HOME/.xbindkeysrc
 ```
 Or modify the existing one.
 
 4. You can reload/test updated config with the command:
-```
+```shell
 xbindkeys xbindkeys -p
 ```
 5. Remeber to include cmd `xbindkeys` in a startup script.
@@ -53,7 +53,38 @@ xbindkeys xbindkeys -p
 
 Install [`Package Control`](https://packagecontrol.io/installation).
 
+#### Syncthing
 
+Installation:
+```shell
+# Add the release PGP keys:
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+
+# Add the "stable" channel to your APT sources:
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+
+# Update and install syncthing:
+sudo apt-get update
+sudo apt-get install syncthing
+```
+
+## Resources
+
+#### Nerd Fonts
+
+After copying fonts the cache must be refreshed:
+```shell
+fc-cache -vf ~/.local/share/fonts/NerdFonts
+```
+
+#### Papirus icons pack
+
+Installation:
+```shell
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt-get update
+sudo apt-get install papirus-icon-theme
+```
 ## Developer Tools
 
 * [pyenv](https://github.com/pyenv/pyenv)
