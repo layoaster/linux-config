@@ -1,7 +1,6 @@
 # My Debian-based distro configuration
 
-The configuration I usually replicate in my linux distributions. Mostly useful
-for programmers.
+The configuration I usually replicate in my linux distributions. Mostly useful for programmers.
 
 
 ## Terminal utilities/customization
@@ -66,6 +65,12 @@ echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sourc
 # Update and install syncthing:
 sudo apt-get update
 sudo apt-get install syncthing
+```
+
+Make sure you have the [service file](.config/systemd/user/syncthing.service) copied and register/init the service:
+```shell
+systemctl --user enable syncthing.service
+systemctl --user start syncthing.service
 ```
 
 ## Resources
