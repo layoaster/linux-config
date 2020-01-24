@@ -82,9 +82,10 @@ DEFAULT_USER=`whoami`
 plugins=(
   git
   fzf
+  aws
   # pass
   # kubectl
-  helm
+  # helm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,8 +138,8 @@ alias docod="docker-compose down"
 alias weather="curl wttr.in/~Barcelona"
 
 alias l='ll'
-alias ll='ls -l --group-directories-first'
-alias la='ls -lA --group-directories-first'
+alias ll='ls -lh --group-directories-first'
+alias la='ls -lAh --group-directories-first'
 
 
 ######## APPLICATIONS ENV ###########
@@ -159,7 +160,7 @@ if [ -f '/home/layo/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/l
 export FZF_BASE=/home/layo/.fzf
 
 ### virtualenv
-# Disable venv prompt so powerlevel9k handles it
+# Disable venv prompt so powerlevel10k handles it
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 ### pipenv
