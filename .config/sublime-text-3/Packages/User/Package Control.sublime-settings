@@ -6,8 +6,6 @@
 	"installed_packages":
 	[
 		"gruvbox",
-		"LiveReload",
-		"MarkdownPreview",
 		"Package Control"
 	]
 }
