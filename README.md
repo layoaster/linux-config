@@ -10,7 +10,7 @@ A color scheme for Konsole.
 
 #### Oh My Zsh ([link](https://github.com/robbyrussell/oh-my-zsh))
 
-* **Powerlevel9k** ([link](https://github.com/bhilburn/powerlevel9k)): A theme
+* **Powerlevel10k** ([link](https://github.com/romkatv/powerlevel10k)): A theme
 for the `Oh My Zsh` framework.
 
 #### fzf ([link](https://github.com/junegunn/fzf))
