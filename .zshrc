@@ -2,30 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/layo/.oh-my-zsh
-
-# Enable awesome-fonts
-POWERLEVEL9K_MODE="nerdfont-complete"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-## POWERLEVEL9K customization
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext virtualenv newline context dir vcs)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv newline context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time time)
-# vcs/git colors
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND="006"
-# virtualenv indicator colors
-POWERLEVEL9K_VIRTUALENV_BACKGROUND="104"
-POWERLEVEL9K_VIRTUALENV_FOREGROUND="015"
-# command_execution_time indicator colors
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="243"
-# time colors
-POWERLEVEL9K_TIME_BACKGROUND="252"
-
+## POWERLEVEL10K customization
+source $HOME/.layo-p10k.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
