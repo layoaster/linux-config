@@ -9,7 +9,7 @@ fi
 ###### Virtualenvwrapper
 export WORKON_HOME=$HOME/projects/venv
 export PROJECT_HOME=$HOME/projects/code
-# export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 # export PYENV_DEBUG=1
 
 pyenv virtualenvwrapper_lazy

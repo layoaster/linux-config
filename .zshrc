@@ -86,10 +86,10 @@ plugins=(
     fzf
     docker
     docker-compose
-  # aws
+    aws
   # pass
-  # kubectl
-  # helm
+    kubectl
+    helm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,11 +135,16 @@ alias docoe="docker-compose exec"
 alias docor="docker-compose run --rm"
 alias docod="docker-compose down"
 
+alias kb="kubectl"
+alias kbc="kubectx"
+alias kbn="kubens"
+
 alias weather="curl wttr.in/~Barcelona"
 
-alias l='ll'
-alias ll='ls -lh --group-directories-first'
-alias la='ls -lAh --group-directories-first'
+alias ls="ls --group-directories-first --color\=tty"
+alias l="ll"
+alias ll="ls -lh --group-directories-first --color\=tty"
+alias la="ls -lAh --group-directories-first --color\=tty"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -149,6 +154,7 @@ alias la='ls -lAh --group-directories-first'
 
 ## fzf
 export FZF_BASE=/home/layo/.fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ## virtualenv
 # Disable venv prompt so powerlevel10k handles it
