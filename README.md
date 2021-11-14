@@ -13,6 +13,9 @@ A color scheme for Konsole.
 * **Powerlevel10k** ([link](https://github.com/romkatv/powerlevel10k)): A theme
 for the `Oh My Zsh` framework.
 
+* **Starship** ([link](https://github.com/starship/starship): A prompt
+for the `Oh My Zsh` framework.
+
 #### fzf ([link](https://github.com/junegunn/fzf))
 A general-purpose command-line fuzzy finder.
 

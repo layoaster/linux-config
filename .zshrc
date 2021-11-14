@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -15,7 +15,7 @@ export ZSH="/home/layo/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,6 +69,12 @@ COMPLETION_WAITING_DOTS="true"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# Disables ZSH shared history among terminals
+unsetopt share_history
+
+# Enables ZSH special dirs tab-completion
+zstyle ':completion:*' special-dirs true
+
 
 # Hide default user field on prompt
 DEFAULT_USER=`whoami`
@@ -85,22 +91,24 @@ plugins=(
     git
     fzf
     docker
-    docker-compose
     aws
   # pass
-    kubectl
-    helm
 )
 
 source $ZSH/oh-my-zsh.sh
 
-## User configuration
 
-# Disables ZSH shared history among terminals
-unsetopt share_history
+#### Themes
 
-# Enables ZSH special dirs tab-completion
-zstyle ':completion:*' special-dirs true
+## Powerlevel10k
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+## Starship
+eval "$(starship init zsh)"
+
+
+####  User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -139,7 +147,7 @@ alias kb="kubectl"
 alias kbc="kubectx"
 alias kbn="kubens"
 
-alias weather="curl wttr.in/~Barcelona"
+alias weather="curl wttr.in/~Santa+Cruz+de+Tenerife"
 
 alias ls="ls --group-directories-first --color\=tty"
 alias l="ll"
@@ -147,19 +155,18 @@ alias ll="ls -lh --group-directories-first --color\=tty"
 alias la="ls -lAh --group-directories-first --color\=tty"
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ######## APPLICATIONS ENV ###########
 
 ## pyenv
 eval "$(pyenv init -)"
 
-## Virtualenvwrapper
+###### Virtualenvwrapper
 export WORKON_HOME=$HOME/projects/venv
 export PROJECT_HOME=$HOME/projects/code
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 # export PYENV_DEBUG=1
+
 pyenv virtualenvwrapper_lazy
 
 ## fzf
@@ -167,7 +174,5 @@ export FZF_BASE=/home/layo/.fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ## virtualenv
-# Disable venv prompt so powerlevel10k handles it
+# Disable venv prompt so any zsh themes handles it
 VIRTUAL_ENV_DISABLE_PROMPT=1
-
-

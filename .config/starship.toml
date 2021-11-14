@@ -1,0 +1,168 @@
+# Use custom format
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$line_break\
+$python\
+$character"""
+
+# Right prompt
+right_format = """
+$cmd_duration\
+$jobs\
+$kubernetes\
+$time"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+
+
+
+####### LEFT PROMPT #######
+
+[username]
+style_user = "white"
+format = '[$user]($style)'
+show_always = false
+
+[hostname]
+ssh_only = true
+format =  '@[$hostname]($style) '
+trim_at = ""
+
+[directory]
+read_only = " "
+home_symbol = ""
+truncation_symbol = "  "
+truncation_length = 8
+
+[git_branch]
+symbol = " "
+always_show_remote = false
+format = "[$symbol$branch](green bold) "
+
+[git_status]
+style = "green"
+conflicted = "‼️"
+ahead = "[⬆️$count](245)"
+behind = "[⬇️$count](245)"
+diverged = "[🔀⇡$ahead_count⇣$behind_count](245)"
+up_to_date = "✅"
+untracked = '[❓$count](red)'
+stashed = '[📦$count](245)'
+modified = '[📝$count](229)'
+staged = '[💾$count](green)'
+renamed = "🏷️"
+deleted = "🗑"
+format = '([ $all_status$diverged$ahead$behind]($style) )'
+
+[python]
+symbol = " "
+pyenv_version_name = false
+style = "bold #f57800"
+format = ' [${symbol}${pyenv_prefix}(${version} )]($style)[(\($virtualenv\) )](italic $style)'
+
+# Replace the "➜" symbol in the prompt with "❯"
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+
+####### RIGHT PROMPT #######
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = true
+format = '[ $duration]($style) '
+
+[jobs]
+symbol = " "
+number_threshold = 1
+format = '[$symbol$number ]($style)'
+
+[kubernetes]
+symbol = "⎈ "
+format = '[$symbol[$context](purple)(/$namespace)](bold purple)'
+disabled = false
+
+[time]
+format = ' [\[$time\]](bright-white)'
+disabled = false
+
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = " "
+# Disable the package module, hiding it from the prompt completely
+disabled = true
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
