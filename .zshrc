@@ -75,6 +75,10 @@ unsetopt share_history
 # Enables ZSH special dirs tab-completion
 zstyle ':completion:*' special-dirs true
 
+# Enables menu for completion of every command
+zstyle ':completion:*' menu select
+
+
 
 # Hide default user field on prompt
 DEFAULT_USER=`whoami`
@@ -97,6 +101,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -Uz compinit && compinit
 
 #### Themes
 
@@ -105,7 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ## Starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+## Oh My Posh
+eval "$(oh-my-posh prompt init zsh --config '~/.poshthemes/layo-night-owl.omp.json')"
 
 
 ####  User configuration
