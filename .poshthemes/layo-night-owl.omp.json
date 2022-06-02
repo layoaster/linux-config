@@ -12,13 +12,13 @@
           "foreground": "#011627",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b0",
+          "template": " {{ .Path }} ",
           "properties": {
             "style": "agnoster_short",
             "max_depth": 4,
             "home_icon": "\uf7db",
             "folder_icon": "\uf6d7",
             "folder_separator_icon": " <#011627>\ue0b1</> ",
-            "template": " {{ .Path }} ",
             "mapped_locations": {
               "~/projects/code": "\ue796"
             }
@@ -36,13 +36,13 @@
             "{{ if gt .Ahead 0 }}#21c7a8{{ end }}",
             "{{ if gt .Behind 0 }}#c792ea{{ end }}"
           ],
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
           "properties": {
             "branch_icon": "\ue0a0 ",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
-            "fetch_worktree_count": true,
-            "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} "
+            "fetch_worktree_count": true
           }
         }
       ]
@@ -58,11 +58,11 @@
           "foreground": "#011627",
           "leading_diamond": "\ue0b2<transparent,background>\ufa1e</>",
           "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "template": " {{ .FormattedMs }} ",
           "properties": {
             "style": "roundrock",
             "always_enabled": false,
-            "threshold": 1000,
-            "template": " {{ .FormattedMs }} "
+            "threshold": 1000
           }
         },
         {
@@ -72,8 +72,9 @@
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,background>\ue0b2</>",
+          "template": " \ufd31 {{if .Namespace}}{{.Namespace}}{{end}} <#011627>\ue0b3</> {{.Context}} ",
           "properties": {
-            "template": " \ufd31 {{if .Namespace}}{{.Namespace}}{{end}} <#011627>\ue0b3</> {{.Context}} "
+            "parse_kubeconfig": true
           }
         },
         {
@@ -83,8 +84,8 @@
           "foreground": "#d6deeb",
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "\ue0b4",
+          "template": " \uf64f {{ .CurrentDate | date .Format }} ",
           "properties": {
-            "template": " \uf64f {{ .CurrentDate | date .Format }} ",
             "time_format": "15:04:05"
           }
         }
@@ -96,12 +97,10 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#21c7a8",
-          "properties": {
-            "template": "\u2570\u2500"
-          },
+          "type": "text",
           "style": "plain",
-          "type": "text"
+          "foreground": "#21c7a8",
+          "template": "\u2570\u2500"
         },
         {
           "type": "python",
@@ -110,9 +109,9 @@
           "foreground": "#011627",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b0",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }} {{ if ne .Venv .Full }}({{ .Venv }}){{ end }}{{ end }}",
           "properties": {
-            "display_mode": "environment",
-            "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }} {{ if ne .Venv .Full }}({{ .Venv }}){{ end }}{{ end }}"
+            "display_mode": "environment"
           }
         },
         {
@@ -122,16 +121,14 @@
           "foreground_templates": [
             "{{ if gt .Code 0 }}#ef5350{{ end }}"
           ],
+          "template": "\ue285\ue285 ",
           "properties": {
-            "always_enabled": true,
-            "template": "\ue285\ue285 "
+            "always_enabled": true
           }
         }
       ]
     }
   ],
-  "console_title": true,
-  "console_title_style": "template",
   "console_title_template": "{{ .Folder }}",
   "osc99": true,
   "final_space": false,
@@ -140,5 +137,5 @@
     "foreground": "#d6deeb",
     "template": "\ue285 "
   },
-  "version": 1
+  "version": 2
 }
